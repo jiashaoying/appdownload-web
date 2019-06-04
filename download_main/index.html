@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <title>申港证券App</title>
+    <link type="text/css" rel="stylesheet" href="./index.css" />
+    <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div id="app1" class="appArea">
+      <div class="icon">
+        <img src="../resources/logo.png">
+      </div>
+      <div class="description">
+        <p class="appTitle">申港证券App iOS</p>
+        <p class="intro">软件介绍：<br>
+          <span>申港证券APP是由券业新青年“申港证券”自主研发，倾力打造的一款集行情、开户、交易、理财、资讯、业务办理等为一体的综合服务型APP。</span>
+        </p>
+        <p class="version">当前版本：<br>
+          <span>develop分支最新构建包</span>
+        </p>
+      </div>
+      <div class="qrcode">
+       <ul>
+           <li><img src="../resources/qrcode.png"></li>
+           <li>手机扫描二维码，立即安装</li>
+       </ul>
+      </div>
+     <div class="setup">
+         <button class="downButton" onclick="window.location.href='itms-services://?action=download-manifest&url=https://dev.shgsec.com:1782/builds/iOS/download_main/shgsec_iphone.plist'">点击安装</button>
+     </div>    
+    </div>
+    <div>
+      <div class="header">其他版本</div>
+      <div id="list_result">
+        <table class="tableList" id="versionList">
+          <thead>
+            <tr>
+              <th>构建包</th>
+              <th>构建时间</th>
+              <th>一键安装</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
