@@ -1,0 +1,61 @@
+.appArea {
+  width: 96%;
+  margin: auto;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+.icon {
+  float: left;
+  width: 16%;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+.icon img{
+  height: 80px;
+}
+.description {
+  float: right;
+  width: 70%;
+  margin-left: 10%;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+.appTitle {
+  color: #227cf6;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+.intro {
+  margin: 5px 0;
+  padding: 0;
+  display: block;
+}
+.setup {
+  padding: 0 20px;
+  height: 45px;
+  text-align: center;
+  display: block;
+  line-height: 1.6;
+}
+.downButton {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 22px;
+  background-color: #31b9ff;
+  border-color: #31b9ff;
+  border-radius: 15px;
+}
+.qrcode img{
+  height: 180px;
+}
+ul, ol {
+  list-style: none; 
+}
+li {
+  display: list-item;
+  text-align: center;
+}

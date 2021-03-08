@@ -1,12 +1,11 @@
 $(function () {
-  var PLIST_URL = 'https://dev.shgsec.com:1782/builds/iOS/versions/'
-  var PLIST_NAME = 'shgsec_iphone.plist'
-  var APP_DOWN_BASE = 'itms-services://?action=download-manifest&url=' + PLIST_URL
+  var APP_DOWN_URL = 'https://dev.shgsec.com:1782/builds/Android/'
 
   getAppVersionsPath()
 
   function getAppVersionsPath() {
-    var url = 'https://dev.shgsec.com:1782/web_api/stockinstall/ios/versions/'
+    var url = 'https://dev.shgsec.com:1782/web_api/stockinstall/android/versions/'
+    // url = 'http://localhost:5088/stockinstall/android/versions'
     $.get(url, function (result) {
       console.log(result)
       if (result.code > 0) {
@@ -30,7 +29,7 @@ $(function () {
 
         var td2 = `<td>${time}</td>`;
 
-        html_a = $("<a></a>").attr('href', '#').html("安装");
+        html_a = $("<a></a>").attr('href', '#').html("下载");
         var td3 = $("<td></td>").addClass('install').attr('file_name', file_name).html(html_a);
         var html_tr1 = $("<tr></tr>").append(td1, td2, td3);
 
@@ -41,8 +40,8 @@ $(function () {
     }
   }
   $('body').on('click', '.install', function () {
-    var path = $(this).attr('file_name')
-    window.location.href = APP_DOWN_BASE + path + '/' + PLIST_NAME
-    console.log('点击安装!')
+    var apk_name = $(this).attr('file_name')
+    window.location.href = APP_DOWN_URL + apk_name + '.apk'
+    console.log('点击下载!')
   })
 });

@@ -9,6 +9,6 @@ do
 	cp -a ./template_down/* ./versions/${file_path}
     IPA_URL="${IPA_BASE_URL}${file}"
     IPA_URL=${IPA_URL//\//\\\/}
-    sed -i "" "s/IOS_APP_URL/${IPA_URL}/g" ./versions/${file_path}/shgsec_iphone.plist
+    sed -i "s/IOS_APP_URL/${IPA_URL}/g" ./versions/${file_path}/shgsec_iphone.plist
     echo "${file}替换plist文件完成"
 done
